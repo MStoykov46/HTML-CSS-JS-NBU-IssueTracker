@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Issue Tracker</title>
+</head>
+<body onload="showIssues()">
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <h1>Welcome to Isuue Tracker</h3>
+            </div>
+        </nav>
+        <div id="blankIssue">
+            <div id="issueContent">    
+            <h3>Add new Issue:</h3>
+                <div class="desc">
+                    <label for="descriptionText">Description:</label>
+                    <input placeholder="Write issue description here" type="text" id="desc" maxlength="90">
+                    <hr>
+                </div>
+                <div class="assign">
+                    <label for="assigned">Assigned to:</label>
+                    <input placeholder="Assigned to *name*" type="text" id="assign"
+                    maxlength="90">
+                    <hr>
+                </div>
+                <div class="sev">
+                    <label for="severity">Severity:</label>
+                    <select id="options">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <hr>
+                </div>
+                <button id="submitBtn" type="submit" onclick="onSubmit()">Submit</button>            
+                <p id="error">Blank fields are not allowed !</p>
+            </div>
+        </div>
+        <div id="issuesList">
+        </div>
+    </div>
+    
+</body>
+</html>
